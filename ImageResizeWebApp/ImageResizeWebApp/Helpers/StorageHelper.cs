@@ -14,14 +14,14 @@ namespace ImageResizeWebApp.Helpers
     public static class StorageHelper
     {
 
-        public static bool IsImage(IFormFile file)
+        public static bool IsPDF(IFormFile file)
         {
-            if (file.ContentType.Contains("image"))
+            if (file.ContentType.Contains("pdf"))
             {
                 return true;
             }
 
-            string[] formats = new string[] { ".jpg", ".png", ".gif", ".jpeg" };
+            string[] formats = new string[] { ".pdf" };
 
             return formats.Any(item => file.FileName.EndsWith(item, StringComparison.OrdinalIgnoreCase));
         }

@@ -40,7 +40,7 @@ namespace ImageResizeWebApp.Controllers
 
                 foreach (var formFile in files)
                 {
-                    if (StorageHelper.IsImage(formFile))
+                    if (StorageHelper.IsPDF(formFile))
                     {
                         if (formFile.Length > 0)
                         {
